@@ -8,4 +8,4 @@ FROM locustio/locust:latest
 COPY . /mnt/locust
 WORKDIR /mnt/locust
 EXPOSE 8089:8089 5557:5557 5558:5558
-CMD ["-f", "/mnt/locust/locustfile.py", "--master", "-H", "http://5.161.210.105"]
+CMD ["-f", "/mnt/locust/locustfile.py", "--master", "-H", "http://5.161.210.105:8089"]
