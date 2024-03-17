@@ -10,4 +10,5 @@
 # Turn the above into dockerfile syntax
 FROM locustio/locust
 COPY . /mnt/locust
+EXPOSE 8089:8089
 CMD ["-f", "/mnt/locust/locustfile.py", "--worker", "--master-host", "master"]
