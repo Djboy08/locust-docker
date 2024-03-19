@@ -7,4 +7,8 @@ class QuickstartUser(HttpUser):
     @task
     def run_get(self):
         # self.client.get("https://items-existing-server-dp8gv.ondigitalocean.app/")
-        self.client.post("https://items-existing-server-dp8gv.ondigitalocean.app/", json={"item_name":"i_am_a_test2", "amount": 1})
+        # generate a json with keys from name1 to name 5 and values equal 5
+        json = {}
+        for i in range(1, 200):
+            json[f"name{i}"] = 1
+        self.client.post("https://items-existing-server-dp8gv.ondigitalocean.app/", json=json)
