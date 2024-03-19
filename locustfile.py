@@ -9,6 +9,6 @@ class QuickstartUser(HttpUser):
         # self.client.get("https://items-existing-server-dp8gv.ondigitalocean.app/")
         # generate a json with keys from name1 to name 5 and values equal 5
         json = {}
-        for i in range(1, 6):
+        for i in range(1, 200):
             json[f"name{i}"] = 1
         self.client.post("https://items-existing-server-dp8gv.ondigitalocean.app/", json=json)
